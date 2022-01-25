@@ -43,17 +43,24 @@
       <div>
         <div>
           <p>
-          Example using requests: 
+          Example using requests in localhost: <br>
         import requests <br>
-
         response = requests.post("http://127.0.0.1:5000/predict", json={"input": [[7.0, 0.27, 0.36, 20.7, 0.045, 45.0, 170.0, 1.001, 3.0, 0.45, 8.8]]}) <br>
         response.json() <br>
       </p>
+      <br>
+      <p>
+        Example using requests with the deployed app: <br>
+      import requests <br>
+      response = requests.post("https://pez-wine-app.herokuapp.com/predict", json={"input": [[7.0, 0.27, 0.36, 20.7, 0.045, 45.0, 170.0, 1.001, 3.0, 0.45, 8.8]]}) <br>
+      response.json() <br>
+    </p>
           </div>
       </div>
     <div>
     </div>
-
+<!-- 
+  For a futur version of this app, a form will be proposed to call the API.
       <form action="/predict" method="post" role="form">
         <div class="form-group">
       
@@ -64,6 +71,7 @@
     </div>
       <button type="submit" class="btn btn-success" name="action-predict">Submit</button>
 </form>
+-->
   
 </body>
 
